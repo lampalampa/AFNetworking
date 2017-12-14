@@ -235,6 +235,13 @@ NS_ASSUME_NONNULL_BEGIN
                        success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
                        failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure DEPRECATED_ATTRIBUTE;
 
+- (nullable NSURLSessionDataTask *)PATCH:(NSString *)URLString
+                              parameters:(nullable id)parameters
+               constructingBodyWithBlock:(nullable void (^)(id <AFMultipartFormData> formData))block
+                                progress:(nullable void (^)(NSProgress *uploadProgress))uploadProgress
+                                 success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
+                                 failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
+
 /**
  Creates and runs an `NSURLSessionDataTask` with a multipart `POST` request.
 
